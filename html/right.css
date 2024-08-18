@@ -1,0 +1,25 @@
+.about{
+    display: flex;
+}
+
+.para2 h1{
+    color: #458FB5;
+    
+}
+.para2{
+    margin-top: 20%;
+}
+.img{
+    align-items: end;
+}
+
+.para h1{
+    color: #458FB5;
+}
+button{
+    background-color: #458FB5;
+    padding: 15px 32px;
+    color: white;
+    font-size: 19px;
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+*{
+    background-color:#006599 ;
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+.gift-icons{
+    font-size: 3rem;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+    color: white
+}
+
+.list{
+    
+    list-style: none;
+    margin: 3rem;
+    color: white;
+}
