@@ -9,6 +9,9 @@ a{
 .gift-icons{
     font-size: 3rem;
 }
+.icons{
+    font-size: 3rem;
+}
 
 .title{
     display: flex;
@@ -24,4 +27,10 @@ a{
     list-style: none;
     margin: 3rem;
     color: white;
+    
+}
+.list li{
+    padding: 10px;
+    font-size: 20px;
+    
 }
