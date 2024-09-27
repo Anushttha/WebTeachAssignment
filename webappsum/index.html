@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Card Selector</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <p>playcards</p>
+        <h1>Play Cards</h1>
+        <div class="input-group">
+            <input type="number" id="card1" min="1" max="13" placeholder="Card 1" readonly>
+            <input type="number" id="card2" min="1" max="13" placeholder="Card 2" readonly>
+            <input type="number" id="card3" min="1" max="13" placeholder="Card 3" readonly>
+            <input type="number" id="card4" min="1" max="13" placeholder="Card 4" readonly>
+            <input type="number" id="card5" min="1" max="13" placeholder="Card 5" readonly>
+        </div>
+        <div class="buttons">
+            <button onclick="selectRandomCards()">Select Cards</button>
+            <button onclick="sortCards()">Sort Cards</button>
+            <button onclick="calculateSum()">Calculate Sum</button>
+        </div>
+        <div id="output"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

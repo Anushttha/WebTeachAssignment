@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Window Manipulation</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #3e8e41;
+        }
+    </style>   
+
+    <script>
+        function openImageWindow() {
+            var imageWindow = window.open("", "Image Window", "width=400,height=300");
+            imageWindow.document.write("<h2>Images</h2>");
+            for (var i = 1; i <= 3; i++) {
+                imageWindow.document.write("<img src='https://picsum.photos/200?random=87" + i + ".jpg' alt='Image " + i + "' width='200' height='150'><br>");
+            }
+        }
+
+        function openTableWindow() {
+            var tableWindow = window.open("", "Table Window", "width=400,height=300");
+            tableWindow.document.write("<h2>Student Table</h2>");
+            tableWindow.document.write("<table>");
+            tableWindow.document.write("<tr><th>Name</th><th>Roll No</th><th>Branch</th></tr>");
+            tableWindow.document.write("<tr><td>Alice</td><td>101</td><td>CSE</td></tr>");
+            tableWindow.document.write("<tr><td>Bob</td><td>102</td><td>ECE</td></tr>");
+            tableWindow.document.write("<tr><td>Charlie</td><td>103</td><td>ME</td></tr>");
+            tableWindow.document.write("</table>");
+        }
+
+        function openListWindow() {
+            var listWindow = window.open("", "List Window", "width=300,height=200");
+            listWindow.document.write("<h2>Branches</h2>");
+            listWindow.document.write("<ul>");
+            listWindow.document.write("<li>CSE</li>");
+            listWindow.document.write("<li>ECE</li>");
+            listWindow.document.write("<li>ME</li>");
+            listWindow.document.write("<li>SWE</li>");
+            listWindow.document.write("</ul>");
+        }
+
+        function closeAllWindows() {
+            window.close();
+            var childWindows = window.open("", "_self");
+            childWindows.close();
+        }
+    </script>
+</head>
+<body>
+    <h1>Window Manipulation</h1>
+    <button class="button" onclick="openImageWindow()">Images</button>
+    <button class="button" onclick="openTableWindow()">Tables</button>
+    <button class="button" onclick="openListWindow()">Lists</button>
+    <button class="button" onclick="closeAllWindows()">Close Windows</button>
+</body>
+</html>
