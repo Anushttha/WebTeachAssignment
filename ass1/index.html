@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single Page Application</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    .form-container {
+      max-width: 300px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body ng-app="app" ng-controller="formController">
+
+  <div class="form-container">
+    <!-- First Form -->
+    <div ng-show="showLoginForm">
+      <h3>Log in to Facebook</h3>
+      <input type="text" placeholder="Email address or phone number" /><br /><br />
+      <input type="password" placeholder="Password" /><br /><br />
+      <button>Log In</button>
+      <button ng-click="toggleForm()">Create New Account</button>
+    </div>
+
+    <!-- Second Form -->
+    <div ng-show="!showLoginForm">
+      <h3>Create a new account</h3>
+      <input type="text" placeholder="First Name" /><br /><br />
+      <input type="text" placeholder="Surname" /><br /><br />
+      <input type="text" placeholder="Mobile number or email" /><br /><br />
+      Gender: 
+      <input type="radio" name="gender" /> Female
+      <input type="radio" name="gender" /> Male
+      <input type="radio" name="gender" /> Custom<br /><br />
+      <button ng-click="toggleForm()">Sign Up</button>
+    </div>
+  </div>
+
+  <script>
+    const app = angular.module('app', []);
+    app.controller('formController', function ($scope) {
+      $scope.showLoginForm = true;
+
+      $scope.toggleForm = function () {
+        $scope.showLoginForm = !$scope.showLoginForm;
+      };
+    });
+  </script>
+
+</body>
+</html>
